@@ -1,6 +1,6 @@
 #!/user/bin/env groovy
 
-def buildImage() {
+def call() {
     echo "Building the Docker image..."
     withCredentials([usernamePassword(credentialsId: 'docker-hub-repo', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
         sh "docker build -t ccroberts1/demo-app:${IMAGE_NAME} ."

@@ -1,6 +1,6 @@
 #!/user/bin/env groovy
 
-def test() {
+def call() {
     echo "Testing the app..."
     sh "npm install"
     sh "npm run test"
